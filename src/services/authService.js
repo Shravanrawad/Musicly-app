@@ -1,6 +1,10 @@
 const CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-const REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI; 
 const AUTH_ENDPOINT = import.meta.env.VITE_SPOTIFY_AUTH_ENDPOINT;
+
+const REDIRECT_URI =
+  import.meta.env.MODE === 'production'
+    ? 'https://musicly-red.vercel.app/callback'
+    : 'http://localhost:5173/callback';
 
 const RESPONSE_TYPE = 'token';
 const SCOPES = [
