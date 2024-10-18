@@ -3,7 +3,7 @@ const AUTH_ENDPOINT = import.meta.env.VITE_SPOTIFY_AUTH_ENDPOINT;
 
 const REDIRECT_URI =
   import.meta.env.MODE === 'production'
-    ? 'https://musicly-red.vercel.app/callback'
+    ? 'https://musicly-one.vercel.app/callback'
     : 'http://localhost:5173/callback';
 
 const RESPONSE_TYPE = 'token';
