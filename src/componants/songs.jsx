@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchSongs, selectAllSongs } from '../redux/songSlice';
 import MusicPlayer from './musicplayer';
 import { FaPause, FaPlay } from 'react-icons/fa';
+import { LuLoader2 } from "react-icons/lu";
+
 
 function Songs({ token }) {
   const dispatch = useDispatch();
@@ -31,7 +33,7 @@ function Songs({ token }) {
     <div className="p-8 bg-gray-900 min-h-screen mb-20">
       <h2 className="text-3xl font-bold text-white mb-6">Your Top Tracks</h2>
 
-      {status === 'loading' && <p className="text-white p-2">Loading songs...</p>}
+      {status === 'loading' && <div className='w-full flex justify-center items-center'><LuLoader2 className='animate-spin h-6 w-6'/></div>}
       {status === 'failed' && <p className="text-red-500 p-2">Error: {error}</p>}
 
       {status === 'succeeded' && songs.length > 0 ? (
