@@ -3,9 +3,8 @@ const AUTH_ENDPOINT = import.meta.env.VITE_SPOTIFY_AUTH_ENDPOINT;
 
 const REDIRECT_URI =
   import.meta.env.MODE === 'production'
-    ? 'https://musicly-one.vercel.app/callback'
-    : 'http://localhost:5173/callback';
-
+    ? import.meta.env.VITE_SPOTIFY_REDIRECT_PROD
+    : import.meta.env.VITE_SPOTIFY_REDIRECT_DEV;
 const RESPONSE_TYPE = 'token';
 const SCOPES = [
   'user-read-playback-state',
