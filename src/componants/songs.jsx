@@ -30,7 +30,7 @@ function Songs({ token }) {
   };
 
   return (
-    <div className="p-8 bg-gray-900 min-h-screen mb-20">
+    <div className="p-8 bg-gray-900 min-h-screen mt-[50px] mb-20">
       <h2 className="text-3xl font-bold text-white mb-6">Your Top Tracks</h2>
 
       {status === 'loading' && <div className='w-full flex justify-center items-center'><LuLoader2 className='animate-spin h-6 w-6'/></div>}
