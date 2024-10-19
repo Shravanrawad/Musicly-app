@@ -3,7 +3,8 @@ import { getAuthUrl } from '../services/authService';
 
 const LoginButton = () => {
   const handleLogin = () => {
-    window.location.href = getAuthUrl();
+    const authUrl = getAuthUrl();
+    window.location.href = authUrl;
   };
 
   return (
