@@ -117,7 +117,7 @@ function SearchPage() {
               className='absolute bottom-4 right-4 bg-green-500 p-3 rounded-full text-white shadow-md hover:bg-green-400 transition transform hover:scale-110'
             >
               {currentTrackIndex === index && isPlaying ? (
-                <FaPause size={24} />
+                <FaPause size={24} className='animate-ping' />
               ) : (
                 <FaPlay size={24} />
               )}
