@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Callback from './pages/Callback';
-import LoginButton from './componants/LoginButton'
 import { HomePage } from './pages/home';
 import SearchPage from './pages/searchpage';
 
