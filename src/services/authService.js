@@ -1,10 +1,7 @@
 const CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const AUTH_ENDPOINT = import.meta.env.VITE_SPOTIFY_AUTH_ENDPOINT;
-const REDIRECT_URI =
-  import.meta.env.MODE === 'development'
-    ? import.meta.env.VITE_SPOTIFY_REDIRECT_URI_DEV
-    : import.meta.env.VITE_SPOTIFY_REDIRECT_URI_PROD;
-
+const REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI_DEV
+    
 
 const RESPONSE_TYPE = 'token';
 const SCOPES = [
