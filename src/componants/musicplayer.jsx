@@ -70,10 +70,10 @@ const MusicPlayer = ({
           />
           <div className="ml-4">
             <h2 className="text-white font-semibold">
-              {songs[currentTrackIndex]?.name || 'Select a song'}
+              {songs[currentTrackIndex]?.name.slice(0, 15)}...
             </h2>
             <p className="text-gray-400">
-              {songs[currentTrackIndex]?.artists[0]?.name || 'Unknown Artist'}
+              {songs[currentTrackIndex]?.artists[0]?.name.slice(0, 10)}...
             </p>
           </div>
         </div>
